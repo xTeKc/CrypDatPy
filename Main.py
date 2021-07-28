@@ -5,13 +5,12 @@ import requests
 import selenium
 from decouple import config
 
-import Blockchains.Binance
-import Blockchains.Cardano
-import Blockchains.Ethereum
-import Blockchains.Fantom
-import Blockchains.HarmonyShard
-import Blockchains.Huobi
-import Blockchains.Polygon
-import Blockchains.Solana
-import Blockchains.xDai
-
+import blockchains.binance
+import blockchains.cardano
+import blockchains.ethereum
+import blockchains.fantom
+import blockchains.harmonyShard
+import blockchains.huobi
+import blockchains.polygon
+import blockchains.solana
+import blockchains.xDai
