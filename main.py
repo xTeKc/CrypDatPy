@@ -17,3 +17,4 @@ import blockchains.xDai
 
 blockchains.binance.binance_contract_address()
 blockchains.ethereum.ethereum_contract_address()
+blockchains.fantom.fantom_contract_address()
