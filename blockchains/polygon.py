@@ -11,6 +11,3 @@ def polygon_contract_address():
     poly_search = input('Enter Polygon Contract Address: ')
     response = requests.get(f'https://api.polygonscan.com/api?module=contract&action=getsourcecode&address={poly_search}&apikey={poly_ca}')
     print(response.json())
-
-
-polygon_contract_address()
