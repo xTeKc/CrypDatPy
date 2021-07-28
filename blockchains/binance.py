@@ -14,6 +14,5 @@ def binance_contract_address():
     print(json.dumps(pretty_json))
 
 
-binance_contract_address()
 
 
