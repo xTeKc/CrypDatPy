@@ -14,3 +14,5 @@ import blockchains.huobi
 import blockchains.polygon
 import blockchains.solana
 import blockchains.xDai
+
+blockchains.binance.binance_contract_address()
