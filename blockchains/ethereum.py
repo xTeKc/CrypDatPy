@@ -11,6 +11,3 @@ def ethereum_contract_address():
     eth_search = input('Enter Ethereum Contract Address: ')
     response = requests.get(f'https://api.etherscan.io/api?module=contract&action=getsourcecode&address={eth_search}&apikey={eth_ca}')
     print(response.json())
-
-
-ethereum_contract_address()
