@@ -29,6 +29,3 @@ def crypto_info():
     print(json.dumps(crypto_data))
 
 crypto_info()
-
-
-
