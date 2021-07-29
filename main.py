@@ -25,8 +25,8 @@ import blockchains.xDai
 def crypto_info():
     id = input('Enter Crypto ID: ')
     crypto_by_id = requests.get(f'https://api.coingecko.com/api/v3/coins/{id}')
-    crypto_data = json.loads(coin_by_id.text)
-    print(json.dumps(coin_data))
+    crypto_data = json.loads(crypto_by_id.text)
+    print(json.dumps(crypto_data))
 
 crypto_info()
 
