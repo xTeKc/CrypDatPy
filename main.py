@@ -14,6 +14,7 @@ import blockchains.polygon
 import blockchains.solana
 import blockchains.xDai
 from pycoingecko import CoinGeckoAPI
+
 cg = CoinGeckoAPI()
 
 # blockchains.binance.binance_contract_address()
