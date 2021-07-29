@@ -4,7 +4,6 @@ import json
 import requests
 import selenium
 from decouple import config
-
 import blockchains.binance
 import blockchains.cardano
 import blockchains.ethereum
@@ -14,9 +13,15 @@ import blockchains.huobi
 import blockchains.polygon
 import blockchains.solana
 import blockchains.xDai
+from pycoingecko import CoinGeckoAPI
+cg = CoinGeckoAPI()
 
 # blockchains.binance.binance_contract_address()
 # blockchains.ethereum.ethereum_contract_address()
 # blockchains.fantom.fantom_contract_address()
 # blockchains.huobi.huobi_contract_address()
 # blockchains.polygon.polygon_contract_address()
+
+
+
+
