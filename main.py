@@ -22,6 +22,11 @@ import blockchains.xDai
 #     polygon = blockchains.polygon.polygon_contract_address()
 
 
+#TODO: sort json to only display the contract address
+# crypto_contract = {"id": "compound-uniswap", "symbol": "cuni", "name": "cUNI",
+# "asset_platform_id": "ethereum", "platforms": {"ethereum": "0x35a18000230da775cac24873d00ff85bccded550"}}
+
+
 def crypto_info():
     id = input('Enter Crypto ID: ')
     crypto_by_id = requests.get(f'https://api.coingecko.com/api/v3/coins/{id}')
