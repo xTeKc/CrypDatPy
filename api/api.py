@@ -32,8 +32,29 @@ class Contract(Resource):
       }
       cryptocurrcies.append(contract)
       return contract, 201
-
-
+    
+    #Ability to Modify existing Contract
+    def put(self, id):
+      parser = reqparse.RequestParser()
+      parser.add_argument("name")
+      parser.add_argument("contract")
+      params = parser.parse_args()
+      for contract in cryptocurrcies:
+          if(id == contract["id"]):
+              contract["name"] = params["name"]
+              contract["contract"] = params["contract"]
+              return contract, 200
+      
+      contract = {
+          "id": id,
+          "name": params["name"],
+          "contract": params["contract"]
+      }
+      
+      cryptocurrcies.append(contract)
+      return contract, 201
+  
+  
 cryptocurrcies = [
     {
         "id": "uni-eth",
