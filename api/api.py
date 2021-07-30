@@ -61,6 +61,12 @@ class Contract(Resource):
       return f"Contract with id {id} is deleted.", 200
   
   
+#Add API resource, Specify its routes and Run the App 
+api.add_resource(Contract, "/cryptocurrencies", "/cryptocurrencies", "/cryptocurrencies/<int:id>")
+if __name__ == '__main__':
+    app.run(debug=True)
+  
+  
 cryptocurrencies = [
     {
         "id": "uni-eth",
