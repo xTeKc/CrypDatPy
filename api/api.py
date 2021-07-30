@@ -10,8 +10,8 @@ class Contract(Resource):
     #Get specific Contract by ID or get Random ID if ID not specified
     def get(self, id=0):
         if id == 0:
-            return random.choice(cryptocurrcies), 200
-        for contract in cryptocurrcies:
+            return random.choice(cryptocurrencies), 200
+        for contract in cryptocurrencies:
             if(contract["id"] == id):
                 return contract, 200
         return "Contract not found", 404
@@ -22,7 +22,7 @@ class Contract(Resource):
       parser.add_argument("name")
       parser.add_argument("contract")
       params = parser.parse_args()
-      for contract in cryptocurrcies:
+      for contract in cryptocurrencies:
           if(id == contract["id"]):
               return f"Contract with id {id} already exists", 400
       contract = {
@@ -30,7 +30,7 @@ class Contract(Resource):
           "name": params["name"],
           "contract": params["contract"]
       }
-      cryptocurrcies.append(contract)
+      cryptocurrencies.append(contract)
       return contract, 201
     
     #Ability to Modify existing Contract
@@ -39,7 +39,7 @@ class Contract(Resource):
       parser.add_argument("name")
       parser.add_argument("contract")
       params = parser.parse_args()
-      for contract in cryptocurrcies:
+      for contract in cryptocurrencies:
           if(id == contract["id"]):
               contract["name"] = params["name"]
               contract["contract"] = params["contract"]
@@ -51,11 +51,17 @@ class Contract(Resource):
           "contract": params["contract"]
       }
       
-      cryptocurrcies.append(contract)
+      cryptocurrencies.append(contract)
       return contract, 201
   
   
-cryptocurrcies = [
+    def delete(self, id):
+      global cryptocurrencies
+      cryptocurrencies = [contract for contract in cryptocurrencies if contract["id"] != id]
+      return f"Contract with id {id} is deleted.", 200
+  
+  
+cryptocurrencies = [
     {
         "id": "uni-eth",
         "name": "uniswap-eth",
