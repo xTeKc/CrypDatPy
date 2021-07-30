@@ -54,7 +54,7 @@ class Contract(Resource):
       cryptocurrencies.append(contract)
       return contract, 201
   
-  
+    #Ability to Delete a Contract
     def delete(self, id):
       global cryptocurrencies
       cryptocurrencies = [contract for contract in cryptocurrencies if contract["id"] != id]
