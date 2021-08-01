@@ -23,3 +23,9 @@ This project enables you to get the contract address for tokens on the specified
 
 + Use contract address to fetch smart contract source code 
 
+### Get Started:
++ `python main.py`
+    + Enter Cryptocurrency ID (specific) -     
+        + Example: `aave-amm-uniaaveweth`
+        + This returns Data for that specific Cryptocurrency
+        ##### - Working on created new API for simplicity-
