@@ -15,4 +15,6 @@ while True:
     #check if window session ended
     if event == sg.WINDOW_CLOSED or event == "End":
         break
+    #output message to window
+    window["-OUTPUT-"].update("check check " + values["-INPUT-"] + ": All Good!")
     
