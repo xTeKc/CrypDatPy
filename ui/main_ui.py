@@ -18,3 +18,5 @@ while True:
     #output message to window
     window["-OUTPUT-"].update("check check " + values["-INPUT-"] + ": All Good!")
     
+    #remove window from screen
+    window.close()
