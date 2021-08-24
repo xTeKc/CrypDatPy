@@ -13,7 +13,7 @@ import blockchains.huobi
 import blockchains.polygon
 import blockchains.solana
 import blockchains.xDai
-import ui.main_ui
+import ui.main_ui as mui
 
 
 #     binance = blockchains.binance.binance_contract_address()
@@ -35,3 +35,4 @@ def crypto_info():
     print(json.dumps(crypto_data))
 
 crypto_info()
+
